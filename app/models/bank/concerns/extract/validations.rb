@@ -7,10 +7,11 @@ module Bank
         extend ActiveSupport::Concern
 
         included do
-          validates :agency, :number, :balance, presence: true
-          validates :agency, length: {is: 4}
-          validates :number, uniqueness: true, length: { is: 6 }
-          validates :balance, numericality: { greater_than_or_equal_to: 0 }
+          validates :type, :value, :date, presence: true
+          validates :depositing_name, length: { minimum: 3 }
+          validates :depositing_cpf, length: { is: 11 }
+          validates :transfer_agency, length: { is: 4 }
+          validates :transfer_account, length: { is: 6 }
         end
 
       end

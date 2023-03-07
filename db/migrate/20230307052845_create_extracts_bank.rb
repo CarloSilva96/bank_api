@@ -8,7 +8,7 @@ class CreateExtractsBank < ActiveRecord::Migration[7.0]
       t.string :depositing_cpf, limit: 11
       t.integer :transfer_agency, limit: 4
       t.integer :transfer_account, limit: 6
-      t.references :account, null: false, foreign_key: { to_table: 'bank.accounts' }, index: { name: 'accounts_fk' }
+      t.references :account, null: false, foreign_key: { to_table: 'bank.accounts' }, index: { name: 'extract_account_fk' }
       t.timestamps
     end
 

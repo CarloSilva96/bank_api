@@ -6,7 +6,8 @@ module Bank
       module Associations
         extend ActiveSupport::Concern
         included do
-          belongs_to :account, class_name: 'Bank::Model::Account'
+          has_one :account, class_name: 'Bank::Model::Account',
+                  inverse_of: :client
         end
       end
     end

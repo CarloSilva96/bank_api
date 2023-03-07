@@ -10,7 +10,9 @@ module Bank
                    foreign_key: :account_id, inverse_of: :account
 
           belongs_to :client, class_name: 'Bank::Model::Client',
-                     foreign_key: :client_id
+                     foreign_key: :client_id, inverse_of: :account
+
+          accepts_nested_attributes_for :client
         end
       end
     end

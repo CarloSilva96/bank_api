@@ -16,12 +16,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_133547) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer "agency", null: false
-    t.bigint "number", null: false
+    t.integer "number", null: false
     t.decimal "balance", precision: 16, scale: 2, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "client_id", null: false
-    t.index ["client_id"], name: "clients_fk"
+    t.index ["client_id"], name: "account_client_fk"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -38,10 +38,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_133547) do
     t.string "type", null: false
     t.decimal "value", precision: 16, scale: 2, null: false
     t.date "date", null: false
+    t.string "depositing_name"
+    t.string "depositing_cpf"
+    t.integer "transfer_agency"
+    t.integer "transfer_account"
     t.bigint "account_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["account_id"], name: "accounts_fk"
+    t.index ["account_id"], name: "extract_account_fk"
   end
 
   add_foreign_key "accounts", "clients"
