@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/associations.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/methods.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/models/bank/model/account.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/models/bank/model/application_record.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/bank/model/client.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/associations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/associations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/associations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/associations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/associations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/associations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/model/client.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/client.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230307045354_create_accounts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307045354_create_accounts_bank.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230307045434_create_clients_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307045434_create_clients_bank.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Processos Seletivos/Api de Conta de Banco/bank_api/app/models/bank/concerns",
+    "last_opened_file_path": "D:/Processos Seletivos/Api de Conta de Banco/bank_api/app/models/bank/model",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +61,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns\client" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank" />
@@ -70,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678161576513</updated>
-      <workItem from="1678161577780" duration="6722000" />
+      <workItem from="1678161577780" duration="16792000" />
     </task>
     <servers />
   </component>

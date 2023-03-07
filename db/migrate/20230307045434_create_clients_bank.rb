@@ -3,13 +3,11 @@ class CreateClientsBank < ActiveRecord::Migration[7.0]
     create_table 'bank.clients' do |t|
       t.string :name, null: false
       t.string :last_name, null: false
-      t.string :cpf, null: false
+      t.string :cpf, null: false, unique: true, limit: 11
       t.date :date_of_birth, null: false
       t.string :password, null: false
       t.timestamps
     end
-
-    # add_index 'gaia.beneficios', :nome, name: 'beneficios_nome_unique', unique: true
   end
 
   def down

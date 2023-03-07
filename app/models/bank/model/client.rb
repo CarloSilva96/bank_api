@@ -2,7 +2,7 @@
 
 module Bank
   module Model
-    class Account < ApplicationRecord
+    class Client < ApplicationRecord
       self.table_name = 'bank.clients'
 
       include Bank::Concerns::Client::Associations

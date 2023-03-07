@@ -5,8 +5,13 @@ module Bank
     module Account
       module Associations
         extend ActiveSupport::Concern
-        # included do
-        # end
+        included do
+          has_many :extracts, class_name: 'Bank::Model::Extract',
+                   foreign_key: :account_id, inverse_of: :account
+
+          belongs_to :client, class_name: 'Bank::Model::Client',
+                     foreign_key: :client_id
+        end
       end
     end
   end

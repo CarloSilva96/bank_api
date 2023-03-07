@@ -5,8 +5,9 @@ module Bank
     module Client
       module Associations
         extend ActiveSupport::Concern
-        # included do
-        # end
+        included do
+          belongs_to :account, class_name: 'Bank::Model::Account'
+        end
       end
     end
   end
