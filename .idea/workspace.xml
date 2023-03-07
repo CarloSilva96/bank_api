@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/associations.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/methods.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/model/account.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/model/application_record.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank/model/client.rb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MfbRfgyyQIjSZG2bE536SFv6r1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Processos Seletivos/Api de Conta de Banco/bank_api/app/models/bank/concerns",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns" />
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns\client" />
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank" />
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
+      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="" />
+      <created>1678161576513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678161576513</updated>
+      <workItem from="1678161577780" duration="6722000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

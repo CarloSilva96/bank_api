@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  bank_api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: "."
+    volumes:
+      - .:/apps/bank_api
+    environment:
+      - USER_DB_RAILS
+      - PASSWORD_DB_RAILS
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:14.0
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5436:5432"
