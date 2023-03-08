@@ -5,6 +5,7 @@ class CreateClientsBank < ActiveRecord::Migration[7.0]
       t.string :last_name, null: false
       t.string :cpf, null: false, unique: true, limit: 11
       t.date :date_of_birth, null: false
+      t.string :email, null: false, unique: true
       t.string :password, null: false
       t.timestamps
     end

@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/bank_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bank_api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/associations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/associations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/associations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/associations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/callbacks.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/validations.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/model/account.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/account.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/model/extract.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/extract.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20230307045354_create_accounts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307045354_create_accounts_bank.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230307045434_create_clients_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307045434_create_clients_bank.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230307133547_add_reference_client_in_account.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307133547_add_reference_client_in_account.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,35 +41,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/carlos/bank_api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/carlos/bank_api/spec/factories/bank",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/factories/bank" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns\client" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank" />
-      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
@@ -150,7 +152,7 @@
       <workItem from="1678208556113" duration="41000" />
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
-      <workItem from="1678217705775" duration="7773000" />
+      <workItem from="1678217705775" duration="25944000" />
     </task>
     <servers />
   </component>

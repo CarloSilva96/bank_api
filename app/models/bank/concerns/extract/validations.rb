@@ -7,11 +7,11 @@ module Bank
         extend ActiveSupport::Concern
 
         included do
-          validates :type, :value, :date, presence: true
-          validates :depositing_name, length: { minimum: 3 }
-          validates :depositing_cpf, length: { is: 11 }
-          validates :transfer_agency, length: { is: 4 }
-          validates :transfer_account, length: { is: 6 }
+          validates :operation_type, :value, :date, presence: true
+          validates :depositing_name, length: { minimum: 3 } unless @depositing_name.nil?
+          validates :depositing_cpf, length: { is: 11 } unless @depositing_cpf.nil?
+          validates :transfer_agency, length: { is: 4 } unless @transfer_agency.nil?
+          validates :transfer_account, length: { is: 6 } unless @transfer_account.nil?
         end
 
       end

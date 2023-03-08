@@ -7,7 +7,8 @@ module Bank
         extend ActiveSupport::Concern
 
         included do
-          validates :name, :last_name, :cpf, :date_of_birth, :password, presence: true
+          validates :name, :last_name, :cpf, :date_of_birth, :email, :password, presence: true
+          validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
           validates :name, :last_name, length: { minimum: 3 }
           validates :cpf, uniqueness: true, length: { is: 11 }
         end

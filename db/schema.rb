@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_133547) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_07_222005) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_133547) do
     t.integer "agency", null: false
     t.integer "number", null: false
     t.decimal "balance", precision: 16, scale: 2, null: false
+    t.string "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "client_id", null: false
@@ -27,24 +28,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_133547) do
   create_table "clients", force: :cascade do |t|
     t.string "name", null: false
     t.string "last_name", null: false
-    t.string "cpf", null: false
+    t.string "cpf", limit: 11, null: false
     t.date "date_of_birth", null: false
+    t.string "email", null: false
     t.string "password", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "extracts", force: :cascade do |t|
-    t.string "type", null: false
+    t.string "operation_type", null: false
     t.decimal "value", precision: 16, scale: 2, null: false
     t.date "date", null: false
     t.string "depositing_name"
-    t.string "depositing_cpf"
+    t.string "depositing_cpf", limit: 11
     t.integer "transfer_agency"
-    t.integer "transfer_account"
-    t.bigint "account_id", null: false
+    t.bigint "transfer_account"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "account_id", null: false
     t.index ["account_id"], name: "extract_account_fk"
   end
 

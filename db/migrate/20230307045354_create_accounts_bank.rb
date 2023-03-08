@@ -5,6 +5,7 @@ class CreateAccountsBank < ActiveRecord::Migration[7.0]
       t.integer :agency, null: false
       t.integer :number, null: false, unique: true
       t.decimal :balance, precision: 16, scale: 2, null: false
+      t.string :status, null: false
       t.timestamps
     end
 
