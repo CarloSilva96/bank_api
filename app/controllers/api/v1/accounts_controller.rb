@@ -22,6 +22,16 @@ module Api
         end
       end
 
+      def update
+        context = ::Account::Update.call(account_params: account_update_params, account: @account)
+        @account = context.account
+        if context.success?
+          render :show, status: 200
+        else
+          render json: format_error(context, :account), status: context.status || 400
+        end
+      end
+
       def show; end
 
       private
@@ -32,6 +42,10 @@ module Api
 
       def account_params
         params.permit(client_attributes: %i[name last_name cpf email date_of_birth password])
+      end
+
+      def account_update_params
+        params.permit(:id, client_attributes: %i[id last_name email password])
       end
 
     end

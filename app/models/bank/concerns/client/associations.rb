@@ -6,6 +6,7 @@ module Bank
       module Associations
         extend ActiveSupport::Concern
         included do
+          has_secure_password
           has_one :account, class_name: 'Bank::Model::Account',
                   inverse_of: :client
         end
