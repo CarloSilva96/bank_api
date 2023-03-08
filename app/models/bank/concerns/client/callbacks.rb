@@ -6,14 +6,17 @@ module Bank
         extend ActiveSupport::Concern
 
         included do
-          before_validation :clean_cpf
+          before_validation :clean_attributes
           before_save :encrypt_password
         end
 
         private
+        def clean_attributes
+          self.cpf = clean_attribute(self.cpf)
+        end
 
-        def clean_cpf
-          self.cpf = cpf.gsub(/[^0-9]/, '') if cpf.present?
+        def clean_attribute(attribute)
+          attribute.present? ? attribute.gsub(/[^0-9]/, '') : nil
         end
 
         def encrypt_password

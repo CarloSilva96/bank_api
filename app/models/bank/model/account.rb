@@ -5,7 +5,7 @@ module Bank
     class Account < ApplicationRecord
       self.table_name = 'bank.accounts'
 
-      enum status: {active: 0, closed: 1}, _prefix: :status, _default: :active
+      enum status: { active: 'active', closed: 'closed' }, _prefix: :status, _default: :active
 
       include Bank::Concerns::Account::Associations
       include Bank::Concerns::Account::Validations

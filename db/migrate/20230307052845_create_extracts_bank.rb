@@ -7,7 +7,7 @@ class CreateExtractsBank < ActiveRecord::Migration[7.0]
       t.string :depositing_name
       t.string :depositing_cpf, limit: 11
       t.integer :transfer_agency, limit: 4
-      t.integer :transfer_account, limit: 6
+      t.integer :transfer_account, limit: 8
       t.timestamps
     end
 

@@ -5,7 +5,7 @@ module Bank
     class Extract < ApplicationRecord
       self.table_name = 'bank.extracts'
 
-      enum operation_type: { deposit: 0, with_draw: 1, transfer_sent: 2, transfer_received: 3 }, _prefix: :operation_type
+      enum operation_type: { deposit: 'deposit', with_draw: 'with_draw', transfer_sent: 'transfer_sent', transfer_received: 'transfer_received' }, _prefix: :operation_type
 
       include Bank::Concerns::Extract::Associations
       include Bank::Concerns::Extract::Validations

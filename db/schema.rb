@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_222005) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer "agency", null: false
-    t.integer "number", null: false
+    t.bigint "number", null: false
     t.decimal "balance", precision: 16, scale: 2, null: false
     t.string "status", null: false
     t.datetime "created_at", null: false

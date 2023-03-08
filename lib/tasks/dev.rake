@@ -3,7 +3,7 @@ namespace :dev do
   task setup: :environment do
     if Rails.env.development?
       puts("Dropando Banco...")
-      %x(rails db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1)
+      %x(rails db:drop)
       puts("Criando Banco...")
       %x(rails db:create)
       puts("Gerando migrates...")
