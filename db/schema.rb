@@ -39,11 +39,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_222005) do
   create_table "extracts", force: :cascade do |t|
     t.string "operation_type", null: false
     t.decimal "value", precision: 16, scale: 2, null: false
-    t.date "date", null: false
+    t.datetime "date", precision: nil, null: false
     t.string "depositing_name"
     t.string "depositing_cpf", limit: 11
-    t.integer "transfer_agency"
-    t.bigint "transfer_account"
+    t.integer "acc_transfer_agency"
+    t.bigint "acc_transfer_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "account_id", null: false

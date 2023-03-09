@@ -6,14 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/associations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/associations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/callbacks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/client/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/client/validations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230307045434_create_clients_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307045434_create_clients_bank.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/update.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/update.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/api/v1/accounts/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/accounts/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/bank/clients.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/clients.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/bank/accounts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/accounts.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/carlos/bank_api/app/interactors/account",
+    "last_opened_file_path": "/home/carlos/bank_api/app/views/api/v1/accounts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,13 +73,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/interactors/account" />
       <recent name="$PROJECT_DIR$/app/views/api/v1/accounts" />
+      <recent name="$PROJECT_DIR$/app/interactors/account" />
       <recent name="$PROJECT_DIR$/spec/factories/bank" />
+      <recent name="$PROJECT_DIR$/app/models/bank/model" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
-      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\concerns" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/interactors/account/close" />
+      <recent name="$PROJECT_DIR$/app/interactors/account/deposit" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank" />
     </key>
@@ -79,7 +96,11 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
@@ -98,7 +119,11 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -120,7 +145,11 @@
         <env name="RAILS_ENV" value="test" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -145,7 +174,8 @@
       <workItem from="1678208556113" duration="41000" />
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
-      <workItem from="1678217705775" duration="49338000" />
+      <workItem from="1678217705775" duration="63628000" />
+      <workItem from="1678330483179" duration="19020000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,6 @@ module Account
     end
 
     def call
-      byebug
       context.account.assign_attributes(context.account_params)
       context.fail!(status: 422) unless context.account.save
     end

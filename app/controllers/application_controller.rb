@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  def format_error(context, object_name)
+  def format_error(context, object_name=nil)
     if context.message.present?
       { message: context.message }
     elsif context.send(object_name)&.errors&.present?

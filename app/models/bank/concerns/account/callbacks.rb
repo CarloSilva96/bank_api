@@ -6,7 +6,7 @@ module Bank
         extend ActiveSupport::Concern
 
         included do
-          before_validation :generate_account
+          before_create :generate_account
         end
 
         private

@@ -12,6 +12,10 @@ module Bank
             end
           }
 
+          scope :by_status, lambda { |status|
+            where('status = ?', status) if status.present?
+          }
+
           scope :by_agency, lambda { |agency|
             where('agency = ?', agency) if agency.present?
           }
