@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         post :deposits, on: :member
         post :transfers, on: :member
         get :balances, on: :member
+        get :extracts, on: :member
       end
 
     end

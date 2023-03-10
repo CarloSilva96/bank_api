@@ -67,12 +67,21 @@ module Api
         if account.present?
           render json: { balance: account.balance, date: date } , status: :ok
         else
+          byebug
           render json: { message: 'Account not found.' }, status: :not_found
         end
       end
 
+      def extracts
+        @extracts = Bank::Model::Extract.where(account_id: params[:id])
+                                        .page(params[:page])
+                                        .per(params[:per_page])
+                                        .order(id: :asc)
+      end
+
       private
 
+      # TODO: TRATAR EXCEPTIONS GERAL
       def set_account
         @account = Bank::Model::Account.find(params[:id])
       end

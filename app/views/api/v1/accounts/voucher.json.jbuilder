@@ -1,4 +1,4 @@
-json.call(@voucher, :operation_type, :value, :date)
+json.call(@voucher, :id, :operation_type, :value, :date)
 if @voucher.operation_type == 'deposit'
   json.call(@voucher, :depositing_name, :depositing_cpf)
   json.receiver do
