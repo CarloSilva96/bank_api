@@ -40,6 +40,57 @@ RSpec.describe Bank::Model::Client, type: :model do
     end
   end
 
+  describe 'Scopes' do
+    before(:each) do
+      account = create(:new_account)
+      @extracts = []
+      2.times do
+        @extracts << create(:new_extract_withdraw, account: account, date: Time.new(2022, 02, 02))
+      end
+      2.times do
+        @extracts << create(:new_extract_withdraw, account: account, date: Time.new(2022, 02, 10))
+      end
+    end
+
+
+    describe 'by_start_date' do
+      it 'retorna lista de extratos a partir da data de inicio' do
+        extracts = Bank::Model::Extract.by_start_date('2022-02-02')
+        expect(extracts.length).to eq(4)
+      end
+      it 'nao retorna lista de extratos a partir da data de inicio' do
+        extracts = Bank::Model::Extract.by_start_date('2022-02-11')
+        expect(extracts.length).to eq(0)
+      end
+    end
+
+    describe 'by_end_date' do
+      it 'retorna lista de extratos até data fim' do
+        extracts = Bank::Model::Extract.by_end_date('2022-02-10')
+        expect(extracts.length).to eq(4)
+      end
+      it 'nao retorna lista de extratos até data fim' do
+        extracts = Bank::Model::Extract.by_end_date('2022-02-01')
+        expect(extracts.length).to eq(0)
+      end
+    end
+
+    describe 'by_start_date and by_end_date' do
+      it 'retorna lista de extratos no intervalo da data de inicio e data fim' do
+        extracts = Bank::Model::Extract
+                     .by_start_date('2022-02-02')
+                     .by_end_date('2022-02-10')
+        expect(extracts.length).to eq(4)
+      end
+      it 'nao retorna lista de extratos no intervalo da data de inicio e data fim' do
+        extracts = Bank::Model::Extract
+                     .by_start_date('2022-02-11')
+                     .by_end_date('2022-02-20')
+        expect(extracts.length).to eq(0)
+      end
+    end
+  end
+
   describe 'Validations' do
     subject {
       create(:new_extract_deposit)
