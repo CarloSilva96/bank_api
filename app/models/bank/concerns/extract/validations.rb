@@ -8,35 +8,21 @@ module Bank
 
         included do
           validates :operation_type, :value, :date, presence: true
-          validates :depositing_name, length: { minimum: 3 } unless :exist_depositing_name?
-          validates :depositing_cpf, length: { is: 11 } unless :exist_depositing_cpf?
-          validates :acc_transfer_agency, length: { is: 4 } unless :exist_acc_transfer_agency?
-          validates :acc_transfer_number, length: { is: 8 } unless :exist_acc_transfer_number?
-          validates :fee_transfer, numericality: { greater_than: 0 } unless :exist_fee_transfer?
-          validates :additional, numericality: { greater_than: 0 } unless :exist_additional_transfer?
+          validates :depositing_name, length: { minimum: 3 }, if: :operation_type_deposit?
+          validates :depositing_cpf, length: { is: 11 }, if: :operation_type_deposit?
+          validates :acc_transfer_agency, length: { is: 4 }, if: :operation_type_transfer_sent?
+          validates :acc_transfer_number, length: { is: 8 }, if: :operation_type_transfer_sent?
+          validates :fee_transfer, numericality: { greater_than: 0 }, if: :operation_type_transfer_sent?
         end
 
         private
 
-        def exist_depositing_name?
-          self.depositing_name&.nil?
+        def operation_type_deposit?
+          self.operation_type.eql?('deposit')
         end
 
-        def exist_depositing_cpf?
-          self.depositing_cpf&.nil?
-        end
-        def exist_acc_transfer_agency?
-          self.acc_transfer_agency&.nil?
-        end
-        def exist_acc_transfer_number?
-          self.acc_transfer_number&.nil?
-        end
-        def exist_fee_transfer?
-          self.fee_transfer&.nil?
-        end
-
-        def exist_additional_transfer?
-          self.additional&.nil?
+        def operation_type_transfer_sent?
+          self.operation_type.eql?('transfer_sent')
         end
 
       end

@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bank_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bank_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/fee_transfer_validate.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/transfer/fee_transfer_validate.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/bank/deposits.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/extracts_deposit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/carlos/bank_api/app/controllers",
+    "last_opened_file_path": "/home/carlos/bank_api/spec/factories/bank",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,11 +57,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/factories/bank" />
+      <recent name="$PROJECT_DIR$/spec/models/bank" />
       <recent name="$PROJECT_DIR$/app/controllers" />
       <recent name="$PROJECT_DIR$/app/views/api/v1/accounts" />
       <recent name="$PROJECT_DIR$/app/interactors/account/transfer" />
-      <recent name="$PROJECT_DIR$/app/models/bank/model" />
-      <recent name="$PROJECT_DIR$/app/interactors/account" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/interactors/account" />
@@ -158,7 +160,7 @@
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
       <workItem from="1678217705775" duration="63628000" />
-      <workItem from="1678330483179" duration="77062000" />
+      <workItem from="1678330483179" duration="93017000" />
     </task>
     <servers />
   </component>
