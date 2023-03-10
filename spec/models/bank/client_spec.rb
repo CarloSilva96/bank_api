@@ -4,6 +4,10 @@ require 'rails_helper'
 
 RSpec.describe Bank::Model::Client, type: :model do
 
+  describe 'Associations' do
+    it { should have_one(:account).class_name('Bank::Model::Account') }
+  end
+
   describe 'Callbacks' do
     describe 'limpar cpf:' do
       it 'remove caracteres não numericos' do

@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/bank/account_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/bank/account_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/bank/client_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/bank/client_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/models/bank/extract_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/bank/extract_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +156,7 @@
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
       <workItem from="1678217705775" duration="63628000" />
-      <workItem from="1678330483179" duration="97687000" />
+      <workItem from="1678330483179" duration="100558000" />
     </task>
     <servers />
   </component>

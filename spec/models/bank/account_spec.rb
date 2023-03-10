@@ -3,6 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe Bank::Model::Account, type: :model do
+  describe 'Associations' do
+    it { should have_many(:extracts).class_name('Bank::Model::Extract') }
+    it { should belong_to(:client).class_name('Bank::Model::Client').with_foreign_key(:client_id) }
+  end
+
   describe 'Callbacks' do
     describe 'gerar dados conta:' do
       it 'gera uma conta com dados válidos e cliente' do
@@ -63,5 +68,4 @@ RSpec.describe Bank::Model::Account, type: :model do
       end
     end
   end
-
 end

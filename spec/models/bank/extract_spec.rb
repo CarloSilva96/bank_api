@@ -2,7 +2,12 @@
 
 require 'rails_helper'
 
-RSpec.describe Bank::Model::Client, type: :model do
+RSpec.describe Bank::Model::Extract, type: :model do
+  describe 'Associations' do
+    it {
+      should belong_to(:account).class_name('Bank::Model::Account')
+    }
+  end
 
   describe 'Callbacks' do
     describe 'limpar depositing_cpf:' do
@@ -51,7 +56,6 @@ RSpec.describe Bank::Model::Client, type: :model do
         @extracts << create(:new_extract_withdraw, account: account, date: Time.new(2022, 02, 10))
       end
     end
-
 
     describe 'by_start_date' do
       it 'retorna lista de extratos a partir da data de inicio' do
