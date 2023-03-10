@@ -74,6 +74,8 @@ module Api
 
       def extracts
         @extracts = Bank::Model::Extract.where(account_id: params[:id])
+                                        .by_start_date(params[:start_date])
+                                        .by_end_date(params[:end_date])
                                         .page(params[:page])
                                         .per(params[:per_page])
                                         .order(id: :asc)

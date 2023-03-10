@@ -1,3 +1,4 @@
+json.total_results @extracts.total_count
 json.results @extracts do |extract|
   json.call(extract, :id, :operation_type, :value, :date)
   if extract.operation_type == 'deposit'
