@@ -6,31 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/account_to_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/account_to.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/create_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/create_deposit.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/deposit_organizer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/deposit_organizer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/model/deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/deposit.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/model/extract.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/extract.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/accounts/voucher.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/accounts/voucher.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +156,7 @@
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
       <workItem from="1678217705775" duration="63628000" />
-      <workItem from="1678330483179" duration="53205000" />
+      <workItem from="1678330483179" duration="57368000" />
     </task>
     <servers />
   </component>

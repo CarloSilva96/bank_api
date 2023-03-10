@@ -61,6 +61,16 @@ module Api
         end
       end
 
+      def balances
+        account = Bank::Model::Account.select(:id, :balance).find(params[:id])
+        date = Time.zone.now
+        if account.present?
+          render json: { balance: account.balance, date: date } , status: :ok
+        else
+          render json: { message: 'Account not found.' }, status: :not_found
+        end
+      end
+
       private
 
       def set_account
