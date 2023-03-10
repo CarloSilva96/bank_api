@@ -5,7 +5,7 @@ module Account
 
       def call
         extract_transfer_received = create_extract_trans_received
-        context.account_received.balance += context.transfer.value
+        context.account_received.balance += extract_transfer_received.value
         context.account_received.extracts << extract_transfer_received
         context.fail!(status: 422, message: 'Error in transfers') unless context.account_received.save
       end

@@ -1,8 +1,8 @@
 module Api
   module V1
     class AccountsController < ApplicationController
-
-      before_action :set_account, only: %i[show update close_accounts transfers]
+      before_action :set_account, only: %i[show update close_accounts transfers withdraws]
+      before_action :authorize_request, only: %i[close_accounts transfers withdraws]
 
       def index
         @accounts = Bank::Model::Account.by_agency(params[:agency])
@@ -66,9 +66,16 @@ module Api
         date = Time.zone.now
         if account.present?
           render json: { balance: account.balance, date: date } , status: :ok
+        end
+      end
+
+      def withdraws
+        context = ::Account::Withdraw.call(account: @account, withdraw: params.required(:withdraw))
+        @voucher = context.voucher
+        if context.success?
+          render :voucher, status: :ok
         else
-          byebug
-          render json: { message: 'Account not found.' }, status: :not_found
+          render json: format_error(context, :account), status: context.status || :bad_request
         end
       end
 

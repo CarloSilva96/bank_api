@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         post :transfers, on: :member
         get :balances, on: :member
         get :extracts, on: :member
+        patch :withdraws, on: :member
       end
 
     end

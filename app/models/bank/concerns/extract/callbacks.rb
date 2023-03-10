@@ -18,7 +18,7 @@ module Bank
         end
 
         def to_negative_withdrawal
-          if self.operation_type.eql?('with_draw') || self.operation_type.eql?('transfer_sent')
+          if self.operation_type.eql?('withdraw') || self.operation_type.eql?('transfer_sent')
             self.value = self.value * -1
             self.fee_transfer = self.fee_transfer * -1 if self.fee_transfer.present?
             self.additional = self.additional * -1 if self.additional.present?
