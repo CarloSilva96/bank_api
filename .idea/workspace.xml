@@ -7,14 +7,9 @@
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/transfer_received_money.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/transfer/transfer_received_money.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/model/extract.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/extract.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/fee_transfer_validate.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/transfer/fee_transfer_validate.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +158,7 @@
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
       <workItem from="1678217705775" duration="63628000" />
-      <workItem from="1678330483179" duration="72077000" />
+      <workItem from="1678330483179" duration="77062000" />
     </task>
     <servers />
   </component>

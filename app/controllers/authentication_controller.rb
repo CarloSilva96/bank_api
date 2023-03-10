@@ -1,7 +1,7 @@
 class AuthenticationController < ApplicationController
 
   def login
-    @account = Bank::Model::Account.by_agency_and_number(params[:agency], params[:number_account])
+    @account = Bank::Model::Account.by_agency_and_number(params[:agency], params[:account_number])
                                    .first
 
     if @account.client&.authenticate(params[:password])
@@ -15,6 +15,6 @@ class AuthenticationController < ApplicationController
   private
 
   def login_account_params
-    params.permit(:agency, :number_account, :password)
+    params.permit(:agency, :account_number, :password)
   end
 end

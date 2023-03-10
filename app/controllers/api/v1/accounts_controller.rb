@@ -1,8 +1,8 @@
 module Api
   module V1
     class AccountsController < ApplicationController
-      before_action :set_account, only: %i[show update close_accounts transfers withdraws]
-      before_action :authorize_request, only: %i[close_accounts transfers withdraws]
+      before_action :authorize_request, except: %i[index create deposits]
+      before_action :set_account, only: %i[show update close_accounts balances transfers withdraws]
 
       def index
         @accounts = Bank::Model::Account.by_agency(params[:agency])
@@ -33,8 +33,8 @@ module Api
       end
 
       def show; end
-      def close_accounts
-        context = ::Account::Close.call(account: @account)
+      def close
+        context = ::Account::Close.call(account: @current_account)
         if context.success?
           head :no_content
         else
@@ -52,7 +52,7 @@ module Api
       end
 
       def transfers
-        context = ::Account::Transfer::TransferOrganizer.call(transfer_params: transfer_params, source_account: @account)
+        context = ::Account::Transfer::TransferOrganizer.call(transfer_params: transfer_params, source_account: @current_account)
         @voucher = context.voucher
         if context.success?
           render :voucher, status: :ok
@@ -62,7 +62,7 @@ module Api
       end
 
       def balances
-        account = Bank::Model::Account.select(:id, :balance).find(params[:id])
+        account = Bank::Model::Account.select(:id, :balance).find(@current_account.id)
         date = Time.zone.now
         if account.present?
           render json: { balance: account.balance, date: date } , status: :ok
@@ -70,7 +70,7 @@ module Api
       end
 
       def withdraws
-        context = ::Account::Withdraw.call(account: @account, withdraw: params.required(:withdraw))
+        context = ::Account::Withdraw.call(account: @current_account, withdraw: params.required(:withdraw))
         @voucher = context.voucher
         if context.success?
           render :voucher, status: :ok
@@ -80,7 +80,7 @@ module Api
       end
 
       def extracts
-        @extracts = Bank::Model::Extract.where(account_id: params[:id])
+        @extracts = Bank::Model::Extract.where(account_id: @current_account.id)
                                         .by_start_date(params[:start_date])
                                         .by_end_date(params[:end_date])
                                         .page(params[:page])
@@ -90,9 +90,9 @@ module Api
 
       private
 
-      # TODO: TRATAR EXCEPTIONS GERAL
       def set_account
         @account = Bank::Model::Account.find(params[:id])
+        render json: { message: 'without permission' }, status: :unauthorized unless @account.id.eql?(@current_account.id)
       end
 
       def account_params

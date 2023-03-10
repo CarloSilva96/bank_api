@@ -16,16 +16,25 @@ module Account
 
       def call
         set_fee_transfer
-        validate_balance_and_update
+        validate_transfer
       end
 
       private
 
-      def validate_balance_and_update
+      def validate_transfer
+        is_available_balance
+        acc_sent_different_received
+      end
+
+      def is_available_balance
         balance_update = context.source_account.balance - context.transfer.value + context.transfer.fee_transfer
         if balance_update < 0
           context.fail!(status: 422, message: 'Balance insufficient.')
         end
+      end
+
+      def acc_sent_different_received
+        context.fail!(status: 422, message: 'It is not allowed to transfer to yourself.') if context.source_account.id.eql?(context.account_received.id)
       end
 
       def set_fee_transfer
