@@ -14,7 +14,6 @@ module Bank
 
       attr_accessor :value, :depositing_name, :depositing_cpf, :account_agency, :account_number
 
-
       def delete_attributes
         self.account_agency = nil
         self.account_number = nil

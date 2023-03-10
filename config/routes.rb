@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :accounts, except: [:destroy] do
         patch :close_accounts, on: :member
         post :deposits, on: :collection
+        post :transfers, on: :member
       end
 
     end

@@ -20,6 +20,9 @@ module Account
         context.deposit = Bank::Model::Deposit.new(context.deposit_params)
         if context.deposit.invalid?
           context.fail!(status: 422, message: context.deposit.errors.messages)
+        else
+          context.agency = context.deposit.account_agency
+          context.account_number = context.deposit.account_number
         end
       end
 

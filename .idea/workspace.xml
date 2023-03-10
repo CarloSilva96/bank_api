@@ -13,22 +13,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/update.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/update.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/scopes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/account_to_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/account_to.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/create_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/create_deposit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/deposit_organizer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/deposit_organizer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/insert_deposit.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/callbacks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/accounts/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/accounts/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/model/deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/deposit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/model/extract.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/model/extract.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/api/v1/accounts/voucher.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/accounts/voucher.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/bank/accounts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/accounts.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/carlos/bank_api/app/views/api/v1/accounts",
+    "last_opened_file_path": "/home/carlos/bank_api/app/interactors/account/transfer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,13 +75,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/interactors/account/transfer" />
+      <recent name="$PROJECT_DIR$/app/models/bank/model" />
       <recent name="$PROJECT_DIR$/app/views/api/v1/accounts" />
       <recent name="$PROJECT_DIR$/app/interactors/account" />
       <recent name="$PROJECT_DIR$/spec/factories/bank" />
-      <recent name="$PROJECT_DIR$/app/models/bank/model" />
-      <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/interactors/account" />
       <recent name="$PROJECT_DIR$/app/interactors/account/close" />
       <recent name="$PROJECT_DIR$/app/interactors/account/deposit" />
       <recent name="D:\Processos Seletivos\Api de Conta de Banco\bank_api\app\models\bank\model" />
@@ -175,7 +178,7 @@
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
       <workItem from="1678217705775" duration="63628000" />
-      <workItem from="1678330483179" duration="19020000" />
+      <workItem from="1678330483179" duration="53205000" />
     </task>
     <servers />
   </component>

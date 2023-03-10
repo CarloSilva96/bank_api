@@ -2,7 +2,7 @@ module Account
   module Deposit
     class DepositOrganizer
       include Interactor::Organizer
-      organize CreateDeposit, AccountToDeposit, InsertDeposit
+      organize CreateDeposit, AccountTo, InsertDeposit
     end
   end
 end

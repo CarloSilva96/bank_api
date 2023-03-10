@@ -12,6 +12,7 @@ module Bank
       include Bank::Concerns::Extract::Methods
       include Bank::Concerns::Extract::Callbacks
       include Bank::Concerns::Extract::Scopes
+
     end
   end
 end

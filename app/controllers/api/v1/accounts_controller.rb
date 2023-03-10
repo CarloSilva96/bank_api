@@ -2,7 +2,7 @@ module Api
   module V1
     class AccountsController < ApplicationController
 
-      before_action :set_account, only: %i[show update close_accounts]
+      before_action :set_account, only: %i[show update close_accounts transfers]
 
       def index
         @accounts = Bank::Model::Account.by_agency(params[:agency])
@@ -47,6 +47,16 @@ module Api
         if context.success?
           render :voucher, status: :ok
         else
+          render json: format_error(context, :voucher), status: context.status || 400
+        end
+      end
+
+      def transfers
+        context = ::Account::Transfer::TransferOrganizer.call(transfer_params: transfer_params, source_account: @account)
+        @voucher = context.voucher
+        if context.success?
+          render :voucher, status: :ok
+        else
           render json: format_error(context), status: context.status || 400
         end
       end
@@ -67,6 +77,10 @@ module Api
 
       def deposit_params
         params.permit(:value, :depositing_name, :depositing_cpf, :account_agency, :account_number)
+      end
+
+      def transfer_params
+        params.permit(:value, :acc_transfer_agency, :acc_transfer_number)
       end
 
     end

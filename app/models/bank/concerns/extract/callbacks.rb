@@ -6,6 +6,7 @@ module Bank
         extend ActiveSupport::Concern
         included do
           before_validation :clean_attributes
+          before_save :to_negative_withdrawal
         end
 
         private
@@ -14,6 +15,14 @@ module Bank
         end
         def clean_attribute(attribute)
           attribute.present? ? attribute.gsub(/[^0-9]/, '') : nil
+        end
+
+        def to_negative_withdrawal
+          if self.operation_type.eql?('with_draw') || self.operation_type.eql?('transfer_sent')
+            self.value = self.value * -1
+            self.fee_transfer = self.fee_transfer * -1 if self.fee_transfer.present?
+            self.additional = self.additional * -1 if self.additional.present?
+          end
         end
 
       end
