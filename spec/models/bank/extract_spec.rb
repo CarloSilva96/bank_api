@@ -5,7 +5,39 @@ require 'rails_helper'
 RSpec.describe Bank::Model::Client, type: :model do
 
   describe 'Callbacks' do
-
+    describe 'limpar depositing_cpf:' do
+      it 'remove caracteres não numericos' do
+        depositing_cpf = Faker::CPF.cpf
+        extract_deposit = create(:new_extract_deposit, depositing_cpf: depositing_cpf)
+        extract_deposit.save
+        expect(extract_deposit.depositing_cpf).to eq(depositing_cpf.gsub(/[^0-9]/, ''))
+      end
+    end
+    describe 'negativa valores de retirada de saldo seja saque ou trasnferencia' do
+      before(:each) do
+        @accounts = []
+        2.times do
+          @accounts << FactoryBot.create(:new_account)
+        end
+      end
+      context 'negativa valores na transferencia no extrato:' do
+        it 'negativa value e fee_transfer' do
+          extract_transfer_sent = build(:new_extract_transfer_sent, account: @accounts.first)
+          extract_transfer_sent.acc_transfer_agency = @accounts.second&.agency
+          extract_transfer_sent.acc_transfer_number = @accounts.second&.number
+          extract_transfer_sent.save
+          expect(extract_transfer_sent.value.negative?).eql?(true)
+          expect(extract_transfer_sent.fee_transfer.negative?).eql?(true)
+        end
+      end
+      context 'negativa valor no saque:' do
+        it 'negative value' do
+          extract_withdraw = create(:new_extract_withdraw, account: @accounts.first)
+          extract_withdraw.save
+          expect(extract_withdraw.value.negative?).eql?(true)
+        end
+      end
+    end
   end
 
   describe 'Validations' do
