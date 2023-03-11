@@ -11,13 +11,12 @@
       <schema-mapping>
         <introspection-scope>
           <node negative="1">
-            <node kind="database" qname="exam">
+            <node kind="database">
+              <name qname="exam" />
+              <name qname="exam_test" />
               <node kind="schema" negative="1" />
             </node>
-            <node kind="database">
-              <name qname="exam_test" />
-              <name qname="postgres" />
-            </node>
+            <node kind="database" qname="postgres" />
           </node>
         </introspection-scope>
       </schema-mapping>

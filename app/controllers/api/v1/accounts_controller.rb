@@ -2,7 +2,7 @@ module Api
   module V1
     class AccountsController < ApplicationController
       before_action :authorize_request, except: %i[index create deposits]
-      before_action :set_account, only: %i[show update close_accounts balances transfers withdraws]
+      before_action :set_account, except: %i[index create deposits]
 
       def index
         @accounts = Bank::Model::Account.by_agency(params[:agency])
@@ -33,6 +33,7 @@ module Api
       end
 
       def show; end
+
       def close
         context = ::Account::Close.call(account: @current_account)
         if context.success?
@@ -41,6 +42,7 @@ module Api
           render json: format_error(context, :account), status: context.status || :bad_request
         end
       end
+
       def deposits
         context = ::Account::Deposit::DepositOrganizer.call(deposit_params: deposit_params)
         @voucher = context.voucher
@@ -92,7 +94,7 @@ module Api
 
       def set_account
         @account = Bank::Model::Account.find(params[:id])
-        render json: { message: 'without permission' }, status: :unauthorized unless @account.id.eql?(@current_account.id)
+        render json: { message: 'without permission' }, status: :forbidden unless @account.id.eql?(@current_account.id)
       end
 
       def account_params
@@ -110,7 +112,6 @@ module Api
       def transfer_params
         params.permit(:value, :acc_transfer_agency, :acc_transfer_number)
       end
-
     end
   end
 end

@@ -48,8 +48,9 @@ gem "net-http"
 gem 'jwt'
 
 group :development, :test do
+  gem 'active_storage_validations'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'airborne'
+  gem 'airborne', '~> 0.3.7'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'cpf_faker'
   gem 'database_cleaner-active_record'

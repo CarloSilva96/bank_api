@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bank_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bank_api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/bank.PAYuAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam.H7gvAA/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/bank/account_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/bank/account_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/bank/client_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/bank/client_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/bank/extract_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/bank/extract_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/bank/extracts.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,35 +44,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/carlos/bank_api/spec/factories/bank",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/carlos/bank_api/app/controllers/api/v1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1" />
+      <recent name="$PROJECT_DIR$/spec/support" />
+      <recent name="$PROJECT_DIR$/config/initializers" />
+      <recent name="$PROJECT_DIR$/spec/requests/bank" />
       <recent name="$PROJECT_DIR$/spec/factories/bank" />
-      <recent name="$PROJECT_DIR$/spec/models/bank" />
-      <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app/views/api/v1/accounts" />
-      <recent name="$PROJECT_DIR$/app/interactors/account/transfer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/interactors/account" />
@@ -156,7 +171,9 @@
       <workItem from="1678208605961" duration="217000" />
       <workItem from="1678208844902" duration="6807000" />
       <workItem from="1678217705775" duration="63628000" />
-      <workItem from="1678330483179" duration="100558000" />
+      <workItem from="1678330483179" duration="114809000" />
+      <workItem from="1678512193623" duration="15151000" />
+      <workItem from="1678527585744" duration="6789000" />
     </task>
     <servers />
   </component>
