@@ -47,15 +47,17 @@ gem "net-http"
 
 gem 'jwt'
 
+gem 'cpf_cnpj', '~> 0.2.1'
+
 group :development, :test do
   gem 'active_storage_validations'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'airborne', '~> 0.3.7'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'cpf_faker'
   gem 'database_cleaner-active_record'
   gem 'factory_bot_rails'
   gem 'faker', '>= 2.13.0'
+  gem 'cpf_faker'
   gem 'rspec-rails', '~> 4.0.2'
   gem 'shoulda-matchers', '>= 4.3.0'
 end

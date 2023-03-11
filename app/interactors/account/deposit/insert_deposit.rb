@@ -5,8 +5,8 @@ module Account
       include Interactor
 
       def call
-        context.account_received.balance = context.account_received.balance + context.deposit.value
         extract_deposit = create_extract_deposit
+        context.account_received.balance = context.account_received.balance + extract_deposit.value
         context.voucher = extract_deposit
         context.account_received.extracts << extract_deposit
         context.fail!(status: 422) unless context.account_received.save

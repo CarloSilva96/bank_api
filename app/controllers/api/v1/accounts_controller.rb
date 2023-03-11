@@ -18,7 +18,7 @@ module Api
         if context.success?
           render :show, status: :created
         else
-          render json: format_error(context, :account), status: context.status || 400
+          render json: format_error(context, :account), status: context.status
         end
       end
 
@@ -47,9 +47,9 @@ module Api
         context = ::Account::Deposit::DepositOrganizer.call(deposit_params: deposit_params)
         @voucher = context.voucher
         if context.success?
-          render :voucher, status: :ok
+          render :voucher, status: :created
         else
-          render json: format_error(context, :voucher), status: context.status || 400
+          render json: format_error(context, :voucher), status: context.status
         end
       end
 
@@ -59,7 +59,7 @@ module Api
         if context.success?
           render :voucher, status: :ok
         else
-          render json: format_error(context), status: context.status || 400
+          render json: format_error(context), status: context.status
         end
       end
 
@@ -72,12 +72,12 @@ module Api
       end
 
       def withdraws
-        context = ::Account::Withdraw.call(account: @current_account, withdraw: params.required(:withdraw))
+        context = ::Account::Withdraw.call(account: @current_account, withdraw: params.permit(:withdraw))
         @voucher = context.voucher
         if context.success?
           render :voucher, status: :ok
         else
-          render json: format_error(context, :account), status: context.status || :bad_request
+          render json: format_error(context, :account), status: context.status
         end
       end
 

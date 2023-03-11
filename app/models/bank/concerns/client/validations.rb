@@ -10,9 +10,15 @@ module Bank
           validates :name, :last_name, :cpf, :date_of_birth, :email, presence: true
           validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
           validates :name, :last_name, length: { minimum: 3 }
-          validates :cpf, uniqueness: true, length: { is: 11 }
+          validates :cpf, uniqueness: true
+          validate :valid_cpf
         end
 
+        private
+
+        def valid_cpf
+          errors.add(:cpf, 'cpf invalid') unless CPF.valid?(self.cpf)
+        end
       end
     end
   end

@@ -39,16 +39,23 @@ RSpec.describe "Accounts Requests", type: :request do
   describe 'POST /api/v1/accounts CREATE' do
     context 'Quando passa dados validos' do
       it 'salva e retorna account' do
-        account_attributes = FactoryBot.attributes_for(:new_account)
-        account_attributes[:client_attributes] = FactoryBot.attributes_for(:new_client)
+        account_attributes = { client_attributes:  FactoryBot.attributes_for(:new_client) }
         expect do
-          post api_v1_accounts_path,
-               params: account_attributes
+            post api_v1_accounts_path,
+                  params: account_attributes
         end.to change { Bank::Model::Account.count }.by(1)
-
         expect(response).to have_http_status(201)
         expect_json_keys(%i[id agency number balance client])
         expect_json_keys('client', %i[id name last_name cpf email date_of_birth])
+      end
+    end
+
+    context 'Quando passa dados invalidos' do
+      it 'não salva e retorna 422' do
+        account_attributes = { client_attributes: {} }
+        post api_v1_accounts_path,
+             params: account_attributes
+        expect(response).to have_http_status(422)
       end
     end
   end
@@ -140,5 +147,86 @@ RSpec.describe "Accounts Requests", type: :request do
     end
   end
 
+  describe 'PATCH /api/v1/accounts/:id/close CLOSE' do
+    before(:each) do
+      @account = create(:new_account)
+    end
+
+    context 'Quando cliente está autenticado' do
+      context 'Quando passa id respectivo da conta do cliente ' do
+        it 'encerra conta e retorna 204' do
+
+          patch close_api_v1_account_path(id: valid_login_account[:id]),
+                headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" }
+
+          account = Bank::Model::Account.find(valid_login_account[:id])
+
+          expect(response).to have_http_status(204)
+          expect(account.status).to eq('closed')
+        end
+      end
+
+      context 'Quando passa id diferente da sua conta autenticada' do
+        it 'não encerra conta e retorna 403' do
+          patch close_api_v1_account_path(id: @account.id),
+                headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" }
+
+          account = Bank::Model::Account.find(valid_login_account[:id])
+          expect(response).to have_http_status(403)
+          expect(account.status).to eq('active')
+        end
+      end
+    end
+
+    context 'Quando cliente não está autenticado' do
+      it 'não encerra conta e retorna 401' do
+        patch close_api_v1_account_path(id: valid_login_account[:id])
+        expect(response).to have_http_status(401)
+      end
+    end
+
+  end
+
+  describe 'POST /api/v1/accounts/deposits DEPOSITS' do
+    before(:each) do
+      @account = FactoryBot.create(:new_account)
+      @deposit_params = {
+        depositing_name: Faker::Name.name,
+        depositing_cpf: Faker::CPF.cpf,
+        value: 200.00,
+        account_agency: @account.agency,
+        account_number: @account.number
+      }
+    end
+
+    context 'Quando depositante passa dados válidos' do
+      it 'faz deposito e retorna 201' do
+        post deposits_api_v1_accounts_path, params: @deposit_params
+        account = Bank::Model::Account.find(@account.id)
+        expect(response).to have_http_status(201)
+        expect(account.balance).to eq(@deposit_params[:value])
+      end
+    end
+
+    context 'Quando depositante passa dados inválidos' do
+      it 'não faz deposito e retorna 422' do
+        deposit_params_empty = Bank::Model::Deposit.new.instance_values
+        post deposits_api_v1_accounts_path, params: deposit_params_empty
+        expect(response).to have_http_status(422)
+      end
+    end
+
+    context 'Quando depositante passa agencia e numero da conta invalidos' do
+      it 'não faz deposito e retorna 422' do
+        @deposit_params[:account_agency] = 0000
+        @deposit_params[:account_number] = 00000000
+        post deposits_api_v1_accounts_path, params: @deposit_params
+        expect(response).to have_http_status(422)
+      end
+    end
+
+  end
+
+  
 
 end
