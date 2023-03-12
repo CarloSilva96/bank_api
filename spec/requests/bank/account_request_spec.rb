@@ -210,7 +210,7 @@ RSpec.describe "Accounts Requests", type: :request do
 
     context 'Quando depositante passa dados inválidos' do
       it 'não faz deposito e retorna 422' do
-        deposit_params_empty = Bank::Model::Deposit.new.instance_values
+        deposit_params_empty = {}
         post deposits_api_v1_accounts_path, params: deposit_params_empty
         expect(response).to have_http_status(422)
       end
@@ -227,6 +227,44 @@ RSpec.describe "Accounts Requests", type: :request do
 
   end
 
-  # TODO: FALTA FAZER transfers, balances, withdraws
+  describe 'GET /api/v1/accounts/:id/balances BALANCES' do
+    before(:each) do
+      @account = create(:new_account)
+    end
+
+    context 'Quando cliente está autenticado' do
+      context 'Quando passa id respectivo da conta do cliente' do
+        it 'retorna saldo e data do saldo com status 200' do
+          get balances_api_v1_account_path(id: valid_login_account[:id]),
+              headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" }
+
+          account = Bank::Model::Account.find(valid_login_account[:id])
+
+          expect(response).to have_http_status(200)
+          expect_json_keys(%i[balance date])
+          expect_json(balance: account.balance.to_s)
+        end
+      end
+
+      context 'Quando passa id diferente da sua conta autenticada' do
+        it 'retorna 403' do
+          get balances_api_v1_account_path(id: @account.id),
+              headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" }
+
+          expect(response).to have_http_status(403)
+        end
+      end
+
+    end
+
+    context 'Quando client não está autenticado' do
+      it 'retorna 401' do
+        get balances_api_v1_account_path(id: invalid_login_account[:id])
+        expect(response).to have_http_status(401)
+      end
+    end
+  end
+
+  # TODO: FALTA FAZER transfers, withdraws
 
 end

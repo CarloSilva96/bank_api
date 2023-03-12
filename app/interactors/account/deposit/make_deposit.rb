@@ -7,7 +7,7 @@ module Account
         deposit_extract = create_extract_deposit
         context.voucher = deposit_extract
         context.account_received.balance += deposit_extract.value
-        context.fail!(status: 422, message: deposit_extract.errors) unless context.account_received.save
+        context.fail!(status: 422, message: context.account_received.errors) unless context.account_received.save
       end
 
       private
