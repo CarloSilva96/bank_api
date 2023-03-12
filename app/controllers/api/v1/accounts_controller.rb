@@ -44,7 +44,9 @@ module Api
       end
 
       def deposits
-        context = ::Account::Deposit::DepositOrganizer.call(deposit_params: deposit_params)
+        context = ::Account::Deposit::DepositOrganizer.call(deposit_params: deposit_params,
+                                                            agency: deposit_params[:account_agency],
+                                                            account_number: deposit_params[:account_number])
         @voucher = context.voucher
         if context.success?
           render :voucher, status: :created
