@@ -8,6 +8,7 @@ module Bank
 
         included do
           validates :operation_type, :value, :date, presence: true
+          validates :value, numericality: { greater_than: 0 }
           validates :depositing_name, length: { minimum: 3 }, if: :operation_type_deposit?
           validates :acc_transfer_agency, length: { is: 4 }, if: :operation_type_transfer_sent?
           validates :acc_transfer_number, length: { is: 8 }, if: :operation_type_transfer_sent?
@@ -19,6 +20,10 @@ module Bank
 
         def operation_type_deposit?
           self.operation_type.eql?('deposit')
+        end
+
+        def operation_type_transfer_received?
+          self.operation_type.eql?('transfer_received')
         end
 
         def operation_type_transfer_sent?

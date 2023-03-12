@@ -5,18 +5,18 @@ module Account
       include Interactor
       def call
         deposit_extract = create_extract_deposit
-        context.voucher = deposit_extract
         context.account_received.balance += deposit_extract.value
         context.fail!(status: 422, message: context.account_received.errors) unless context.account_received.save
+        context.voucher = deposit_extract
       end
 
       private
       def create_extract_deposit
         context.deposit_params[:operation_type] = 'deposit'
-        deposit_extract = Bank::Model::Extract.factory_extract(context.deposit_params)
-        context.account_received.extracts << deposit_extract
-        context.fail!(status: 422, message: deposit_extract.errors) if deposit_extract.invalid?
-        deposit_extract
+        extract_deposit = Bank::Model::Extract.factory_extract(context.deposit_params)
+        extract_deposit.account = context.account_received
+        context.fail!(status: 422, message: extract_deposit.errors) if extract_deposit.invalid?
+        extract_deposit
       end
 
     end

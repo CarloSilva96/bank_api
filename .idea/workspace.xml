@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/make_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/make_deposit.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/model/deposit.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/withdraw.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/withdraw.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/requests/bank/account_request_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/bank/account_request_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +163,7 @@
       <workItem from="1678512193623" duration="15151000" />
       <workItem from="1678527585744" duration="13392000" />
       <workItem from="1678558693517" duration="21262000" />
-      <workItem from="1678584270629" duration="2273000" />
+      <workItem from="1678584270629" duration="16322000" />
     </task>
     <servers />
   </component>

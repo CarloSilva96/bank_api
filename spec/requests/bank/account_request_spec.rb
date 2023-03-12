@@ -265,6 +265,74 @@ RSpec.describe "Accounts Requests", type: :request do
     end
   end
 
-  # TODO: FALTA FAZER transfers, withdraws
+
+  describe 'PATCH /api/v1/accounts/:id/withdraws WITHDRAWS' do
+    before(:each) do
+      @account = create(:new_account)
+    end
+
+    context 'Quando cliente está autenticado' do
+      context 'Quando passa id respectivo da conta do cliente ' do
+        it 'faz saque quando tem saldo disponivel e retorna 200' do
+
+          account = Bank::Model::Account.find(valid_login_account[:id])
+          account.balance = 100
+          account.save
+
+          patch withdraws_api_v1_account_path(id: valid_login_account[:id]),
+                headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" },
+                params: { withdraw: 100.0 }
+
+          expect(response).to have_http_status(200)
+          expect(BigDecimal(json_body[:value])).to eq(-100.0)
+          expect(account.reload.balance).to eq(0)
+          expect_json_keys(%i[id operation_type value date])
+        end
+      end
+
+      context 'Quando cliente não tem saldo disponivel ' do
+        it 'não faz saque e retorna 422' do
+
+          patch withdraws_api_v1_account_path(id: valid_login_account[:id]),
+                headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" },
+                params: { withdraw: 100 }
+
+          expect(response).to have_http_status(422)
+        end
+      end
+
+      context 'Quando passa dados invalidos ' do
+        it 'não faz saque e retorna 422' do
+
+          patch withdraws_api_v1_account_path(id: valid_login_account[:id]),
+                headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" },
+                params: { withdraw: -100 }
+
+          expect(response).to have_http_status(422)
+        end
+      end
+
+      context 'Quando passa id diferente da sua conta autenticada' do
+        it 'não faz saque e retorna 403' do
+          patch withdraws_api_v1_account_path(id: @account.id),
+                headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" },
+                params: { withdraw: 100.0 }
+
+          expect(response).to have_http_status(403)
+        end
+      end
+    end
+
+    context 'Quando cliente não está autenticado' do
+      it 'não faz saque e retorna 401' do
+        patch withdraws_api_v1_account_path(id: valid_login_account[:id]),
+              params: { withdraw: 100.0 }
+        expect(response).to have_http_status(401)
+      end
+    end
+
+  end
+
+  # TODO: FALTA FAZER transfers
 
 end
