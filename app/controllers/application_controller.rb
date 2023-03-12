@@ -16,9 +16,9 @@ class ApplicationController < ActionController::API
       @decoded = Bank::Utils::JsonWebToken.decode(header)
       @current_account = Bank::Model::Account.find(@decoded[:account_id])
     rescue ActiveRecord::RecordNotFound => e
-      render json: { errors: e.message }, status: :unauthorized
-    rescue JWT::DecodeError => e
-      render json: { errors: e.message }, status: :unauthorized
+      render json: { message: e.message }, status: :unauthorized
+    rescue JWT::DecodeError
+      render json: { message: 'required JSON WEB TOKEN' }, status: :unauthorized
     end
   end
 

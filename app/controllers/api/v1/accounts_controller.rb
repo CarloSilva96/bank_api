@@ -56,7 +56,10 @@ module Api
       end
 
       def transfers
-        context = ::Account::Transfer::TransferOrganizer.call(transfer_params: transfer_params, source_account: @current_account)
+        context = ::Account::Transfer::TransferOrganizer.call(transfer_params: transfer_params,
+                                                              source_account: @current_account,
+                                                              agency: transfer_params[:acc_transfer_agency],
+                                                              account_number: transfer_params[:acc_transfer_number])
         @voucher = context.voucher
         if context.success?
           render :voucher, status: :ok
@@ -66,10 +69,10 @@ module Api
       end
 
       def balances
-        account = Bank::Model::Account.select(:id, :balance).find(@current_account.id)
+        balance = Bank::Model::Account.find(@current_account.id).balance
         date = Time.zone.now
-        if account.present?
-          render json: { balance: account.balance, date: date } , status: :ok
+        if balance.present?
+          render json: { balance: balance, date: date } , status: :ok
         end
       end
 

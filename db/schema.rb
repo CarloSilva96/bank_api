@@ -38,7 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_222005) do
 
   create_table "extracts", force: :cascade do |t|
     t.string "operation_type", null: false
-    t.decimal "value", precision: 16, scale: 2, null: false
+    t.decimal "value", precision: 16, scale: 2, default: "0.0", null: false
     t.decimal "fee_transfer", precision: 5, scale: 2
     t.decimal "additional", precision: 5, scale: 2
     t.datetime "date", precision: nil, null: false

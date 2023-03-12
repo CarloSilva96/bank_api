@@ -29,6 +29,8 @@ module Bank
                 extract = extract_deposit(attributes)
               elsif attributes[:operation_type].eql?('transfer_sent')
                 extract = extract_transfer_sent(attributes)
+              elsif attributes[:operation_type].eql?('transfer_received')
+                extract = extract_transfer_sent(attributes)
               end
               extract
             end
@@ -40,10 +42,16 @@ module Bank
             end
             def extract_transfer_sent(attributes)
               {
-                acc_transfer_agency: attributes[:depositing_name],
-                acc_transfer_number: attributes[:depositing_cpf],
+                acc_transfer_agency: attributes[:acc_transfer_agency],
+                acc_transfer_number: attributes[:acc_transfer_number],
                 fee_transfer: attributes[:fee_transfer],
                 additional: attributes[:additional]
+              }
+            end
+            def extract_transfer_received(attributes)
+              {
+                acc_transfer_agency: attributes[:acc_transfer_agency],
+                acc_transfer_number: attributes[:acc_transfer_number],
               }
             end
 

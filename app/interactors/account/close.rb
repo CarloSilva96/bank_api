@@ -12,7 +12,7 @@ module Account
       breaches.each do |breach|
         message << breach.messages
       end
-      context.fail!(message: message.join(', '))
+      context.fail!(status: 422, message: message.join(', '))
     end
 
     def call

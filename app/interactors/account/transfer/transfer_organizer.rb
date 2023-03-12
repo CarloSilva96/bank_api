@@ -2,8 +2,8 @@ module Account
   module Transfer
     class TransferOrganizer
       include Interactor::Organizer
-      organize CreateTransfer, AccountTo, FeeTransferValidate,
-               TransferSentMoney, TransferReceivedMoney
+      organize AccountTo, CreateTransferSent, ValidateTransferSent,
+               CreateTransferReceived, SaveTransferSent, SaveTransferReceived
     end
   end
 end

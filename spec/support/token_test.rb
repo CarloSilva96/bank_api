@@ -9,15 +9,8 @@ def valid_login
   }
 end
 
-def invalid_login
-  {
-    id: 0,
-    token: SecureRandom.uuid
-  }
-end
-
 def generate_account
-  account = FactoryBot.build(:new_account)
+  account = FactoryBot.build(:new_account, balance: 0)
   account.client = FactoryBot.build(:new_client)
   account.save
   account

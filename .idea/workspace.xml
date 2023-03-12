@@ -5,13 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/interactors/account/transfer/create_transfer_received.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/interactors/account/transfer/create_transfer_sent.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/interactors/account/transfer/save_transfer_sent.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.byebug_history" beforeDir="false" afterPath="$PROJECT_DIR$/.byebug_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/bank.PAYuAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcab4765-2ace-4fe8-929f-704943ad36bf/storage_v2/_src_/database/exam_test.soA6-w/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interactors/account/deposit/make_deposit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/deposit/make_deposit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/account_to.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/account_to.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/close.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/close.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/create.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/create.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/create_transfer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/fee_transfer_validate.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/transfer/validate_transfer_sent.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/transfer_organizer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/transfer/transfer_organizer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/transfer_received_money.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/transfer/transfer_sent_money.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/account/update.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/update.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/interactors/account/withdraw.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/account/withdraw.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/methods.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/extract/validations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/bank/model/transfer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230307052845_create_extracts_bank.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/requests/bank/account_request_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/bank/account_request_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/support/token_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/token_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,35 +58,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/carlos/bank_api/app/models/bank/utils&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/carlos/bank_api/config/locales",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/locales" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/interactors/account/transfer" />
       <recent name="$PROJECT_DIR$/app/models/bank/utils" />
       <recent name="$PROJECT_DIR$/app/controllers/api/v1" />
-      <recent name="$PROJECT_DIR$/spec/support" />
-      <recent name="$PROJECT_DIR$/config/initializers" />
-      <recent name="$PROJECT_DIR$/spec/requests/bank" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/interactors/account" />
@@ -163,7 +189,7 @@
       <workItem from="1678512193623" duration="15151000" />
       <workItem from="1678527585744" duration="13392000" />
       <workItem from="1678558693517" duration="21262000" />
-      <workItem from="1678584270629" duration="16322000" />
+      <workItem from="1678584270629" duration="41986000" />
     </task>
     <servers />
   </component>
