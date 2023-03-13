@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="ajustes render.yaml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bank/concerns/account/callbacks.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/accounts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/api/v1/accounts/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/accounts/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/bank/account_request_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/bank/account_request_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,7 @@
       <workItem from="1678558693517" duration="21262000" />
       <workItem from="1678584270629" duration="44932000" />
       <workItem from="1678675175754" duration="773000" />
-      <workItem from="1678676774946" duration="2371000" />
+      <workItem from="1678676774946" duration="3964000" />
     </task>
     <task id="LOCAL-00001" summary="ajustes render.yaml">
       <created>1678672910434</created>

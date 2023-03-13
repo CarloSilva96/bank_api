@@ -37,7 +37,7 @@ module Api
       def close
         context = ::Account::Close.call(account: @current_account)
         if context.success?
-          head :no_content
+          render json: { message: 'account closed successfully' }, status: :ok
         else
           render json: format_error(context, :account), status: context.status || :bad_request
         end

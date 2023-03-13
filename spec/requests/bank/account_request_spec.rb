@@ -29,7 +29,7 @@ RSpec.describe "Accounts Requests", type: :request do
       it 'retorna todos os dados da conta' do
         get api_v1_accounts_path
         expect(json_body[:total_results]).to eq(@accounts.length)
-        expect_json_keys('results.*', %i[id agency number status balance client])
+        expect_json_keys('results.*', %i[id agency number status client])
         expect_json_keys('results.*.client', %i[id name last_name cpf])
         expect(response).to have_http_status(200)
       end
@@ -142,14 +142,14 @@ RSpec.describe "Accounts Requests", type: :request do
   describe 'PATCH /api/v1/accounts/:id/close CLOSE' do
     context 'Quando cliente está autenticado' do
       context 'Quando cliente está acessando sua respectiva conta' do
-        it 'encerra conta e retorna 204' do
+        it 'encerra conta e retorna 200' do
 
           patch close_api_v1_account_path(id: valid_login_account[:id]),
                 headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" }
 
           account = Bank::Model::Account.find(valid_login_account[:id])
 
-          expect(response).to have_http_status(204)
+          expect(response).to have_http_status(200)
           expect(account.status).to eq('closed')
         end
       end
@@ -433,7 +433,7 @@ RSpec.describe "Accounts Requests", type: :request do
           it 'retorna todos os extracts da conta e status 200' do
             get extracts_api_v1_account_path(id: valid_login_account[:id]),
                 headers: { 'Authorization': "Bearer #{valid_login_account[:token]}" }
-            expect(json_body[:total_results]).to eq(3)
+            expect_json(total_results: 3)
             expect_json_keys('results.*', %i[id date value operation_type])
             expect(response).to have_http_status(200)
           end
