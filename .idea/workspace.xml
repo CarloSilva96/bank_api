@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="">
+    <list default="true" id="a0ed4c2f-a099-499e-8282-7168ef4110e8" name="Changes" comment="ajustes render.yaml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,11 +158,23 @@
       <workItem from="1678512193623" duration="15151000" />
       <workItem from="1678527585744" duration="13392000" />
       <workItem from="1678558693517" duration="21262000" />
-      <workItem from="1678584270629" duration="44773000" />
+      <workItem from="1678584270629" duration="44932000" />
     </task>
+    <task id="LOCAL-00001" summary="ajustes render.yaml">
+      <created>1678672910434</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678672910434</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajustes render.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajustes render.yaml" />
   </component>
 </project>
