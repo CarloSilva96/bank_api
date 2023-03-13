@@ -1,5 +1,5 @@
 databases:
-  - name: bank-api
+  - name: exam
     databaseName: exam
     user: postgres
 
