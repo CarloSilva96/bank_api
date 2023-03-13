@@ -16,12 +16,12 @@ module Bank
           self.balance = 0
         end
         def generate_agency
-          self.agency = Faker::Number.number(digits: 4)
+          self.agency = rand(10**4)
         end
         def generate_number
           exists_account = true
           while exists_account
-            number = Faker::Number.number(digits: 8)
+            number = rand(10**8)
             account = Bank::Model::Account.by_agency_and_number(self.agency, number).first
             if account.nil?
               self.number = number
