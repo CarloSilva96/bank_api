@@ -5,10 +5,6 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("PUMA_MAX_THREADS") { 5 } %>
 
-production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-
 development:
   <<: *default
   database: exam
