@@ -16,6 +16,7 @@ module Account
     end
 
     def call
+      context.fail!(status: 422, message: 'account already closed') if context.account.status == Bank::Model::Account.statuses[:closed]
       context.account.status = Bank::Model::Account.statuses[:closed]
       context.fail!(status: 422) unless context.account.save
     end

@@ -161,7 +161,7 @@ RSpec.describe "Accounts Requests", type: :request do
 
           account = Bank::Model::Account.find(valid_login_account[:id])
           expect(response).to have_http_status(403)
-          expect(account.status).to eq('active')
+          expect(account.status).to eq(Bank::Model::Account.statuses[:active])
         end
       end
     end
@@ -345,7 +345,7 @@ RSpec.describe "Accounts Requests", type: :request do
             expect(@account_received.reload.balance).to eq(10)
             expect(@account_received.extracts.first.value).to eq(10)
             expect_json_keys(%i[id operation_type value date acc_transfer_agency acc_transfer_number])
-            expect_json(operation_type: 'transfer_sent', acc_transfer_agency: @account_received.agency,
+            expect_json(operation_type: Bank::Model::Extract.operation_types[:transfer_sent], acc_transfer_agency: @account_received.agency,
                         acc_transfer_number: @account_received.number)
             expect_json(
               value: -> value {

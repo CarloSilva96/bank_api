@@ -9,7 +9,7 @@ module Account
       private
 
       def create_extract_transf_received
-        context.transfer_params[:operation_type] = 'transfer_received'
+        context.transfer_params[:operation_type] = Bank::Model::Extract.operation_types[:transfer_received]
         context.transfer_params[:acc_transfer_agency] = context.source_account.agency
         context.transfer_params[:acc_transfer_number] = context.source_account.number
         extract_transfer_received = Bank::Model::Extract.factory_extract(context.transfer_params)

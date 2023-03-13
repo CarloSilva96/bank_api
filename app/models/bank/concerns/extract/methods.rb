@@ -13,7 +13,7 @@ module Bank
           end
           def self.factory_extract(attributes = {})
             extract = extract_specify(attributes)
-            if extract.present? || attributes[:operation_type].eql?('withdraw')
+            if extract.present? || attributes[:operation_type].eql?(Bank::Model::Extract.operation_types[:withdraw])
               extract[:date] = Time.now
               extract[:value] = attributes[:value]
               extract[:operation_type] = attributes[:operation_type]
@@ -25,11 +25,11 @@ module Bank
           class << self
             def extract_specify(attributes = {})
               extract = {}
-              if attributes[:operation_type].eql?('deposit')
+              if attributes[:operation_type].eql?(Bank::Model::Extract.operation_types[:deposit])
                 extract = extract_deposit(attributes)
-              elsif attributes[:operation_type].eql?('transfer_sent')
+              elsif attributes[:operation_type].eql?(Bank::Model::Extract.operation_types[:transfer_sent])
                 extract = extract_transfer_sent(attributes)
-              elsif attributes[:operation_type].eql?('transfer_received')
+              elsif attributes[:operation_type].eql?(Bank::Model::Extract.operation_types[:transfer_received])
                 extract = extract_transfer_sent(attributes)
               end
               extract

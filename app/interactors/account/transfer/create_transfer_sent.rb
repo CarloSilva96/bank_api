@@ -33,7 +33,7 @@ module Account
       private
 
       def create_extract_transfer_sent
-        context.transfer_params[:operation_type] = 'transfer_sent'
+        context.transfer_params[:operation_type] = Bank::Model::Extract.operation_types[:transfer_sent]
         extract_transfer_sent = Bank::Model::Extract.factory_extract(context.transfer_params)
         extract_transfer_sent.account = context.source_account
         fee_transfer_additional(extract_transfer_sent)

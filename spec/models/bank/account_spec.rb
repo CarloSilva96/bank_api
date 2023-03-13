@@ -24,7 +24,7 @@ RSpec.describe Bank::Model::Account, type: :model do
         @accounts << FactoryBot.create(:new_account)
       end
       2.times do
-        @accounts << FactoryBot.create(:new_account, status: 'closed')
+        @accounts << FactoryBot.create(:new_account, status: Bank::Model::Account.statuses[:closed])
       end
     end
 
@@ -38,12 +38,12 @@ RSpec.describe Bank::Model::Account, type: :model do
 
     describe 'by_status' do
       it 'retorna uma conta(s) por meio do status active' do
-        accounts = Bank::Model::Account.by_status('active')
+        accounts = Bank::Model::Account.by_status(Bank::Model::Account.statuses[:active])
         expect(accounts.length).to eq(3)
       end
 
       it 'retorna conta(s) por meio do status closed' do
-        accounts = Bank::Model::Account.by_status('closed')
+        accounts = Bank::Model::Account.by_status(Bank::Model::Account.statuses[:closed])
         expect(accounts.length).to eq(2)
       end
     end

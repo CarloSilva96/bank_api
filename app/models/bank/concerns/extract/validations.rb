@@ -19,15 +19,15 @@ module Bank
         private
 
         def operation_type_deposit?
-          self.operation_type.eql?('deposit')
+          self.operation_type.eql?(Bank::Model::Extract.operation_types[:deposit])
         end
 
         def operation_type_transfer_received?
-          self.operation_type.eql?('transfer_received')
+          self.operation_type.eql?(Bank::Model::Extract.operation_types[:transfer_received])
         end
 
         def operation_type_transfer_sent?
-          self.operation_type.eql?('transfer_sent')
+          self.operation_type.eql?(Bank::Model::Extract.operation_types[:transfer_sent])
         end
 
         def valid_depositing_cpf

@@ -12,7 +12,7 @@ module Account
 
       private
       def create_extract_deposit
-        context.deposit_params[:operation_type] = 'deposit'
+        context.deposit_params[:operation_type] = Bank::Model::Extract.operation_types[:deposit]
         extract_deposit = Bank::Model::Extract.factory_extract(context.deposit_params)
         extract_deposit.account = context.account_received
         context.fail!(status: 422, message: extract_deposit.errors) if extract_deposit.invalid?
